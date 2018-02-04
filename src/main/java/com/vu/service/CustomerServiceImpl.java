@@ -4,18 +4,20 @@ import java.util.List;
 
 import com.vu.model.Customer;
 import com.vu.repository.CustomerRepository;
-import com.vu.repository.HibernateCustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
 	
-	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	//private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
 	
-	/* (non-Javadoc)
-	 * @see com.vu.service.CustomerService#findall()
-	 */
+	private CustomerRepository customerRepository;
+	
 	@Override
 	public List<Customer> findall(){
 		return customerRepository.findall();
+	}
+
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
 	}
 
 }
