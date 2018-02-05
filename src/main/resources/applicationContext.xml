@@ -7,6 +7,7 @@
 		  class="com.vu.repository.HibernateCustomerRepositoryImpl"/>
 
 	<bean name="customerService" class="com.vu.service.CustomerServiceImpl">
-		<property name="customerRepository" ref="customerRepository"/>
+		<!-- <property name="customerRepository" ref="customerRepository"/> -->
+		<constructor-arg index="0" ref="customerRepository"></constructor-arg>
 	</bean>
 </beans>
