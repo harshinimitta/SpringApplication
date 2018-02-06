@@ -2,17 +2,18 @@ package com.vu.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.vu.model.Customer;
 import com.vu.repository.CustomerRepository;
-import com.vu.repository.HibernateCustomerRepositoryImpl;
 
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 	
-	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	@Autowired
+	private CustomerRepository customerRepository;
 	
-	/* (non-Javadoc)
-	 * @see com.vu.service.CustomerService#findall()
-	 */
 	@Override
 	public List<Customer> findall(){
 		return customerRepository.findall();
