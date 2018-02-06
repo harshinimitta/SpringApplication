@@ -18,7 +18,7 @@ public class AppConfig {
 		
 		//setter injection
 		CustomerServiceImpl service = new CustomerServiceImpl();
-		//service.setCustomerRepository(getCustomerRepository());
+		// service.setCustomerRepository(getCustomerRepository());
 		return service;
 	}
 	
