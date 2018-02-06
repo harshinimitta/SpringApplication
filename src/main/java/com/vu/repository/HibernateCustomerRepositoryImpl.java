@@ -3,12 +3,11 @@ package com.vu.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import com.vu.model.Customer;
 
-@Repository
+@Repository("hibernateRepo")
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 

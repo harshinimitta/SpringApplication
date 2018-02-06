@@ -13,7 +13,7 @@ import com.vu.repository.CustomerRepository;
 public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
-	@Qualifier("hibernateCustomerRepositoryImpl")
+	@Qualifier("hibernateRepo")
 	private CustomerRepository customerRepository;
 	
 	/*@Autowired
