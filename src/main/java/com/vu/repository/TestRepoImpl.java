@@ -3,28 +3,23 @@ package com.vu.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import com.vu.model.Customer;
 
 @Repository
 
-public class HibernateCustomerRepositoryImpl implements CustomerRepository {
+public class TestRepoImpl implements CustomerRepository{
 
-	/* (non-Javadoc)
-	 * @see com.vu.repository.CustomerRepository#findall()
-	 */
 	@Override
 	public List<Customer> findall() {
-		List<Customer> customers = new ArrayList<>();
-
+		List<Customer> customers = new ArrayList<Customer>();
+		
 		Customer customer = new Customer();
-		customer.setFirstName("Harshini");
+		customer.setFirstName("Teja");
 		customer.setLastName("Mitta");
 
 		customers.add(customer);
-		
 		return customers;
 	}
 
