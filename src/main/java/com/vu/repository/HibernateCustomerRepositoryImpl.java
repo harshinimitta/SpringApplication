@@ -7,9 +7,7 @@ import com.vu.model.Customer;
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
-	/* (non-Javadoc)
-	 * @see com.vu.repository.CustomerRepository#findall()
-	 */
+	
 	@Override
 	public List<Customer> findall() {
 		List<Customer> customers = new ArrayList<>();
