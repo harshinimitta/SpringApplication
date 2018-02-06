@@ -11,12 +11,18 @@ import com.vu.repository.CustomerRepository;
 @Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 	
-	@Autowired
+	//@Autowired
 	private CustomerRepository customerRepository;
 	
 	@Override
 	public List<Customer> findall(){
 		return customerRepository.findall();
+	}
+
+	@Autowired
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		System.out.println("using setter injection autowiring");
+		this.customerRepository = customerRepository;
 	}
 
 }
