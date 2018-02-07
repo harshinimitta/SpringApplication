@@ -6,15 +6,14 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context 
 		http://www.springframework.org/schema/context/spring-context.xsd">
-		
+	
+	<context:annotation-config/>	
 	<context:property-placeholder location="app.properties"/>
 
 	<bean name="customerRepository" 
-		  class="com.vu.repository.HibernateCustomerRepositoryImpl">
+		  class="com.vu.repository.HibernateCustomerRepositoryImpl"/>
 		  
-		  <property name="dbUsername" value="${dbUsername}"/>
-	</bean>
-
+	
 	<bean name="customerService" class="com.vu.service.CustomerServiceImpl" autowire="byType">
 		<!-- <constructor-arg index="0" ref="customerRepository"></constructor-arg> -->
 	</bean>
