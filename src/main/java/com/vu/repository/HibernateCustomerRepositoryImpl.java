@@ -7,13 +7,12 @@ import com.vu.model.Customer;
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
-	/* (non-Javadoc)
-	 * @see com.vu.repository.CustomerRepository#findall()
-	 */
+	private String dbUsername;
+	
 	@Override
 	public List<Customer> findall() {
 		List<Customer> customers = new ArrayList<>();
-
+		System.out.println(dbUsername);
 		Customer customer = new Customer();
 		customer.setFirstName("Harshini");
 		customer.setLastName("Mitta");
@@ -21,6 +20,10 @@ public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 		customers.add(customer);
 		
 		return customers;
+	}
+
+	public void setDbUsername(String dbUsername) {
+		this.dbUsername = dbUsername;
 	}
 
 }
